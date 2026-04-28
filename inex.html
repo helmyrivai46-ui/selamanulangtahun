@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Ucapan Ulang Tahun</title>
+<style>
+    body {
+        background: #0f172a;
+        color: #38bdf8;
+        font-family: monospace;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .text {
+        font-size: 24px;
+        border-right: 3px solid #38bdf8;
+        white-space: pre-line; /* ini yang bikin turun ke bawah */
+    }
+</style>
+</head>
+<body>
+
+<div class="text" id="typing"></div>
+
+<script>
+const text = `Selamat ulang tahun Din 🎉
+Semoga dipanjangkan umurnya
+Sehat selalu
+Dan semoga TA-nya cepat selesai 🙏`;
+
+let index = 0;
+
+function typingEffect() {
+    if (index < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typingEffect, 50);
+    }
+}
+
+typingEffect();
+</script>
+
+</body>
+</html>
